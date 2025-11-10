@@ -81,7 +81,7 @@ export default function App() {
           </header>
 
           <main className="flex-1 w-full rounded p-[0.625rem] flex flex-col items-center gap-[3rem] 2xl:flex-row 2xl:justify-between xl:items-start xl:gap-0 h-[49.8125rem] flex-shrink-0 self-stretch">
-            <div className="flex flex-col items-center gap-[0.5rem] relative z-10 xl:items-start xl:text-left">
+            <div className="flex flex-col items-center gap-[0.5rem] relative z-10 xl:items-start xl:text-left animate-fadeIn">
               <h1 className="[font-family:'Instrument Sans'] text-[9.375rem] text-[var(--gray800,#353535)] font-bold leading-none">
                 Car Culture
               </h1>
@@ -102,8 +102,8 @@ export default function App() {
       </div>
       <img
         src={Car}
-        alt="Carro esportivo"
-        className="w-[69.625rem] xl:h-[30.9] 2xl:h-[14.8125rem] aspect-[1114/237] absolute left-1/2 -translate-x-1/2 top-[47.7rem] bg-[lightgray_0px_0px/_100%_135.341%_no-repeat] object-cover"
+        alt=""
+        className="w-[69.625rem] xl:h-[30.9] 2xl:h-[14.8125rem] aspect-[1114/237] absolute left-[24.4rem] -translate-x-1/2 top-[47.7rem] bg-[lightgray_0px_0px/_100%_135.341%_no-repeat] object-cover animate-slideInRight"
       />
     </div>
   )
