@@ -12,7 +12,7 @@ export default function SwitchToggle({ label = 'dark mode', variant = 'default',
   if (variant === 'compact') {
     return (
       <div className="flex items-center w-full justify-between">
-        <p className="text-[var(--bluegrey300,#90A4AE)] [font-family:'Instrument Sans'] text-[1.25rem] font-medium">{label}</p>
+        <p className="text-[var(--bluegrey300,#90A4AE)] [font-family:'Instrument Sans'] text-[1.25rem] font-medium select-none">{label}</p>
         {base}
       </div>
     )
@@ -20,7 +20,7 @@ export default function SwitchToggle({ label = 'dark mode', variant = 'default',
 
   return (
     <div className="flex flex-col w-[7rem] h-[3.875rem] justify-center items-center gap-[0.375rem]">
-      <p className="text-[var(--bluegrey300,#90A4AE)] text-right [font-family:'Instrument Sans'] text-[1.25rem] font-medium [line-height:normal]">{label}</p>
+      <p className="text-[var(--bluegrey300,#90A4AE)] text-right [font-family:'Instrument Sans'] text-[1.25rem] font-medium [line-height:normal] select-none">{label}</p>
       {base}
     </div>
   )

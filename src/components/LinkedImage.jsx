@@ -17,6 +17,8 @@ export default function LinkedImage({
   ariaLabel,
   className = '',
   iconOnly = false,
+  // enable/disable glow halo on hover (Tailwind-only implementation)
+  glow = true,
   children,
   ...props
 }) {
@@ -26,8 +28,21 @@ export default function LinkedImage({
     : `${SIZE_MAP[size] ?? SIZE_MAP.md} flex-shrink-0 aspect-[1/1]`
 
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" aria-label={ariaLabel} className={`flex items-center gap-2 ${className}`} {...props}>
-      <img src={src} alt={alt} className={computedImgClass} />
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={ariaLabel}
+      className={`relative inline-flex items-center gap-2 group ${className}`}
+      {...props}
+    >
+      {/* glow halo (only for icon-only usages) */}
+      {iconOnly && glow && (
+        <span className="absolute -inset-1 rounded-full bg-gradient-to-r from-sky-400 to-red-500 opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-80 pointer-events-none" />
+      )}
+
+      <img src={src} alt={alt} className={`${computedImgClass} relative z-10`} />
+
       {!iconOnly && children ? <span className="text-sm">{children}</span> : null}
     </a>
   )

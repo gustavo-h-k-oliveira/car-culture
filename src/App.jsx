@@ -33,6 +33,10 @@ export default function App() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="relative flex w-[120rem] h-[67.5rem] py-[3.125rem] px-[5rem] md:px-[7.5rem] flex-col items-start gap-[4.0625rem] rounded shadow-lg overflow-auto bg-[linear-gradient(180deg,_#FFF_50%,_#999_100%)] z-0">
           <div className="absolute top-[5.69rem] w-[84.58988rem] h-[56.0625rem] flex-shrink-0 aspect-[1353.44/897.00] bg-transparent overflow-hidden left-1/2 -translate-x-1/2 2xl:left-auto 2xl:right-[3.29rem] 2xl:translate-x-0">
+            {/* 
+              Ícone de Gran Turismo — propriedade de Sony Interactive Entertainment.
+              Uso não comercial e apenas ilustrativo neste projeto educacional.
+            */}
             <img
               src={GranTurismoLogo}
               alt="Gran Turismo Logo"
@@ -41,14 +45,14 @@ export default function App() {
           </div>
           <header className="flex justify-between items-center self-stretch w-full">
             <div className="flex w-[20.625rem] h-[1.875rem] justify-center items-center gap-[0.5625rem]">
-              <p className="text-[var(--black,#000)] text-[1.5rem] font-bold leading-normal">
+              <p className="text-[var(--black,#000)] text-[1.5rem] font-bold leading-normal select-none">
                 GHK ☕
               </p>
-              <p className="text-[var(--black,#000)] text-[1.25rem] font-normal leading-normal">
+              <p className="text-[var(--black,#000)] text-[1.25rem] font-normal leading-normal select-none">
                 | Made with
               </p>
               <LinkedImage href="https://react.dev" src={ReactIcon} alt="React logo" size="md" iconOnly ariaLabel="React" />
-              <p className="text-[1.25rem]">and</p>
+              <p className="text-[1.25rem] select-none">and</p>
               <LinkedImage href="https://vitejs.dev" src={ViteIcon} alt="Vite logo" size="md" iconOnly ariaLabel="Vite" />
             </div>
             <div className="hidden lg:flex items-center gap-[4.375rem]">
@@ -82,10 +86,10 @@ export default function App() {
 
           <main className="flex-1 w-full rounded p-[0.625rem] flex flex-col items-center gap-[3rem] 2xl:flex-row 2xl:justify-between xl:items-start xl:gap-0 h-[49.8125rem] flex-shrink-0 self-stretch">
             <div className="flex flex-col items-center gap-[0.5rem] relative z-10 xl:items-start xl:text-left animate-fadeIn">
-              <h1 className="[font-family:'Instrument Sans'] text-[9.375rem] text-[var(--gray800,#353535)] font-bold leading-none">
+              <h1 className="[font-family:'Instrument Sans'] text-[9.375rem] text-[var(--gray800,#353535)] font-bold leading-none select-none">
                 Car Culture
               </h1>
-              <p className="w-full 2xl:w-[51.5rem] text-center xl:text-left text-[var(--black,#000)] [font-family:'Instrument Sans'] text-[5rem] font-semibold leading-tight">
+              <p className="w-full 2xl:w-[51.5rem] text-center xl:text-left text-[var(--black,#000)] [font-family:'Instrument Sans'] text-[5rem] font-semibold leading-tight select-none">
                 More than passion for machines, it’s a <span className="text-sky-600">lifestyle</span>
               </p>
             </div>
@@ -93,12 +97,13 @@ export default function App() {
               <LinkedImage href="https://github.com/gustavo-h-k-oliveira" src={GitHub} alt="GitHub logo" size="lg" iconOnly ariaLabel="GitHub" />
               <LinkedImage href="https://instagram.com/gustavo.h.k.oliveira" src={Instagram} alt="Instagram logo" size="lg" iconOnly ariaLabel="Instagram" />
               <LinkedImage href="https://linkedin.com/in/gustavo-oliveira-713583214" src={LinkedIn} alt="LinkedIn logo" size="lg" iconOnly ariaLabel="LinkedIn" />
-              <p className="text-[var(--red300,#E57373)] text-right [font-family:'Instrument Sans'] text-[1.5625rem] font-bold leading-tight">2016 Ford GT<br /><span className='text-[1.3rem] font-normal'>24h Le Mans</span></p>
+              <p className="text-[var(--red300,#E57373)] text-right [font-family:'Instrument Sans'] text-[1.5625rem] font-bold leading-tight select-none">2016 Ford GT<br /><span className='text-[1.3rem] font-normal'>24h Le Mans</span></p>
             </div>
           </main>
         </div>
-      <div className="absolute left-0 top-[62.12rem] flex items-center px-[5rem] md:px-[7.5rem] w-full h-[5.375rem] bg-[linear-gradient(180deg,_#949494_1.0%,_#9E9E9E_15.01%,_#CECECE_60.56%,_#FFF_98.54%)]">
-        <p className='text-sm text-gray-600'>© <strong>GHK</strong> 2025</p>
+      <div className="absolute top-[62.12rem] flex justify-between items-center px-[5rem] md:px-[7.5rem] w-full h-[5.375rem] bg-[linear-gradient(180deg,_#949494_1.0%,_#9E9E9E_15.01%,_#CECECE_60.56%,_#FFF_98.54%)]">
+        <p className='text-sm text-gray-600 select-none'>© <strong>GHK</strong> 2025</p>
+        <p className='text-xs text-gray-500 select-none justify-center'><strong>Gran Turismo</strong> is a registered trademark of <strong>Sony Interactive Entertainment Inc.</strong></p>
       </div>
       <img
         src={Car}
