@@ -5,4 +5,52 @@
 /* small custom style */
 body {
   @apply antialiased;
+  font-family: 'Inter', 'Instrument Sans', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Design tokens: CSS variables used across the app */
+:root {
+  --black: #000000;
+  --bluegrey300: #90A4AE;
+  --gray800: #353535;
+  --red300: #E57373;
+}
+
+/* Make scrollbars thin, translucent and rounded (applies to elements using overflow-auto/scroll) */
+/* Uses standard properties for Firefox and WebKit pseudo-elements for others */
+* {
+  scrollbar-gutter: stable;
+}
+
+.overflow-auto {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.25) transparent;
+}
+
+/* WebKit browsers (Chrome, Safari, newer Edge) */
+.overflow-auto::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.overflow-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+.overflow-auto::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.18);
+  border-radius: 9999px;
+  border: 2px solid transparent; /* creates padding around thumb */
+  background-clip: content-box;
+}
+.overflow-auto:hover::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.28);
+}
+
+/* Optional: utility class to hide scrollbars while keeping scroll functionality */
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
