@@ -2,7 +2,7 @@ import React from 'react'
 
 const SIZE_MAP = {
   xs: 'w-4 h-4',
-  sm: 'w-5 h-5',
+  sm: 'w-[1.5625rem] h-[1.5625rem]',
   md: 'w-[1.875rem] h-[1.875rem]',
   lg: 'w-[3.125rem] h-[3.125rem]',
   xl: 'w-[4rem] h-[4rem]',

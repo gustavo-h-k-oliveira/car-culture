@@ -31,8 +31,8 @@ export default function App() {
   }, [])
   return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="relative flex w-[120rem] h-[67.5rem] py-[3.125rem] px-[5rem] md:px-[7.5rem] flex-col items-start gap-[4.0625rem] rounded shadow-lg overflow-auto bg-[linear-gradient(180deg,_#FFF_50%,_#999_100%)] z-0">
-          <div className="absolute top-[5.69rem] w-[84.58988rem] h-[56.0625rem] flex-shrink-0 aspect-[1353.44/897.00] bg-transparent overflow-hidden left-1/2 -translate-x-1/2 2xl:left-auto 2xl:right-[3.29rem] 2xl:translate-x-0">
+        <div className="relative flex min-w-[27.5rem] w-full h-[57.3125rem] px-[1.5rem] py-[1.25rem] flex-col items-center gap-[0.9375rem] sm:w-[120rem] sm:h-[67.5rem] sm:py-[3.125rem] sm:px-[5rem] md:px-[7.5rem] sm:items-start sm:gap-[4.0625rem] rounded shadow-lg overflow-auto bg-[linear-gradient(180deg,_#FFF_50%,_#999_100%)] z-0">
+          <div className="hidden sm:block sm:absolute sm:top-[5.69rem] sm:flex-shrink-0 sm:self-stretch sm:h-[56.0625rem] sm:aspect-[1353.44/897.00] sm:bg-transparent sm:overflow-hidden sm:left-1/2 sm:-translate-x-1/2 sm:w-[84.58988rem] 2xl:left-auto 2xl:right-[3.29rem] 2xl:translate-x-0">
             {/* 
               Ícone de Gran Turismo — propriedade de Sony Interactive Entertainment.
               Uso não comercial e apenas ilustrativo neste projeto educacional.
@@ -43,17 +43,19 @@ export default function App() {
               className="block filter saturate-[150%] brightness-[0.9] opacity-[0.3] relative z-0"
             />
           </div>
-          <header className="flex justify-between items-center self-stretch w-full">
-            <div className="flex w-[20.625rem] h-[1.875rem] justify-center items-center gap-[0.5625rem]">
-              <p className="text-[var(--black,#000)] text-[1.5rem] font-bold leading-normal select-none">
+          <header className="flex justify-between items-center self-stretch w-full px-[0.625rem]">
+            <div className="flex h-[1.875rem] justify-center items-end gap-[0.3125rem] sm:items-center sm:gap-[0.5625rem]">
+              <p className="text-[var(--black,#000)] text-[1.125rem] sm:text-[1.5rem] font-bold leading-normal select-none text-center [font-family:'Inter']">
                 GHK ☕
               </p>
-              <p className="text-[var(--black,#000)] text-[1.25rem] font-normal leading-normal select-none">
+              <p className="text-[var(--black,#000)] text-[0.9375rem] sm:text-[1.25rem] font-normal leading-normal select-none [font-family:'Inter']">
                 | Made with
               </p>
-              <LinkedImage href="https://react.dev" src={ReactIcon} alt="React logo" size="md" iconOnly ariaLabel="React" />
-              <p className="text-[1.25rem] select-none">and</p>
-              <LinkedImage href="https://vitejs.dev" src={ViteIcon} alt="Vite logo" size="md" iconOnly ariaLabel="Vite" />
+              <LinkedImage href="https://react.dev" src={ReactIcon} alt="React logo" size="md" iconOnly ariaLabel="React" imgClassName="w-[1.5625rem] h-[1.5625rem] aspect-[1/1] sm:w-[1.875rem] sm:h-[1.875rem] flex-shrink-0" />
+              <p className="text-[var(--black,#000)] text-[0.9375rem] sm:text-[1.25rem] font-normal leading-normal select-none [font-family:'Inter']">
+                and
+              </p>
+              <LinkedImage href="https://vitejs.dev" src={ViteIcon} alt="Vite logo" size="md" iconOnly ariaLabel="Vite" imgClassName="w-[1.5625rem] h-[1.5625rem] aspect-[1/1] sm:w-[1.875rem] sm:h-[1.875rem] flex-shrink-0" />
             </div>
             <div className="hidden lg:flex items-center gap-[4.375rem]">
               <SwitchToggle label="dark mode" />
@@ -70,7 +72,7 @@ export default function App() {
                 <img
                   src={List}
                   alt="Menu"
-                  className="text-[var(--bluegrey300,#90A4AE)] w-[3.125rem] h-[3.125rem] flex-shrink-0 aspect-[1/1]"
+                  className="text-[var(--bluegrey300,#90A4AE)] w-[2.5rem] h-[2.5rem] aspect-[1/1] sm:w-[3.125rem] sm:h-[3.125rem] flex-shrink-0"
                 />
               </button>
               {menuOpen && (
@@ -86,29 +88,42 @@ export default function App() {
 
           <main className="flex-1 w-full rounded p-[0.625rem] flex flex-col items-center gap-[3rem] 2xl:flex-row 2xl:justify-between xl:items-start xl:gap-0 h-[49.8125rem] flex-shrink-0 self-stretch">
             <div className="flex flex-col items-center gap-[0.5rem] relative z-10 xl:items-start xl:text-left animate-fadeIn">
-              <h1 className="[font-family:'Instrument Sans'] text-[9.375rem] text-[var(--gray800,#353535)] font-bold leading-none select-none">
+              <h1 className="[font-family:'Instrument Sans'] text-[4.0625rem] lg:text-[7rem] xl:text-[9.375rem] text-[var(--gray800,#353535)] font-bold leading-tight select-none text-center xl:text-left self-stretch">
                 Car Culture
               </h1>
-              <p className="w-full 2xl:w-[51.5rem] text-center xl:text-left text-[var(--black,#000)] [font-family:'Instrument Sans'] text-[5rem] font-semibold leading-tight select-none">
+              <p className="w-full 2xl:w-[51.5rem] text-center xl:text-left text-[var(--black,#000)] [font-family:'Instrument Sans'] text-[2.8125rem] md:text-[3.5rem] xl:text-[5rem] font-semibold leading-tight select-none self-stretch">
                 More than passion for machines, it’s a <span className="text-sky-600">lifestyle</span>
               </p>
             </div>
-            <div className="flex flex-row flex-wrap justify-center items-center gap-[3.75rem] mx-[5rem] xl:py-[3.75rem] self-stretch relative z-20 bg-white/50 xl:bg-transparent backdrop-blur-sm xl:backdrop-blur-none rounded-lg p-4 2xl:ml-0 2xl:flex-col xl:justify-end 2xl:items-end 2xl:flex-nowrap">
-              <LinkedImage href="https://github.com/gustavo-h-k-oliveira" src={GitHub} alt="GitHub logo" size="lg" iconOnly ariaLabel="GitHub" />
-              <LinkedImage href="https://instagram.com/gustavo.h.k.oliveira" src={Instagram} alt="Instagram logo" size="lg" iconOnly ariaLabel="Instagram" />
-              <LinkedImage href="https://linkedin.com/in/gustavo-oliveira-713583214" src={LinkedIn} alt="LinkedIn logo" size="lg" iconOnly ariaLabel="LinkedIn" />
-              <p className="text-[var(--red300,#E57373)] text-right [font-family:'Instrument Sans'] text-[1.5625rem] font-bold leading-tight select-none">2016 Ford GT<br /><span className='text-[1.3rem] font-normal'>24h Le Mans</span></p>
+            <div className="flex flex-col justify-center items-center gap-[1.25rem] p-[0.625rem] mx-0 sm:flex-row sm:flex-wrap sm:justify-center sm:items-center sm:gap-[2rem] sm:mx-[5rem] sm:p-4 xl:py-[3.75rem] self-stretch relative z-20 bg-transparent sm:bg-white/50 sm:backdrop-blur-sm xl:bg-transparent xl:backdrop-blur-none rounded-lg 2xl:ml-0 2xl:flex-col xl:justify-end 2xl:items-end 2xl:flex-nowrap">
+              <div className="flex flex-row 2xl:flex-col justify-center items-center gap-[2.5rem]">
+                <LinkedImage href="https://github.com/gustavo-h-k-oliveira" src={GitHub} alt="GitHub logo" size="lg" iconOnly ariaLabel="GitHub" />
+                <LinkedImage href="https://instagram.com/gustavo.h.k.oliveira" src={Instagram} alt="Instagram logo" size="lg" iconOnly ariaLabel="Instagram" />
+                <LinkedImage href="https://linkedin.com/in/gustavo-oliveira-713583214" src={LinkedIn} alt="LinkedIn logo" size="lg" iconOnly ariaLabel="LinkedIn" />
+              </div>
+              <p className="text-[var(--red300,#E57373)] text-center xl:text-right [font-family:'Instrument Sans'] text-[1.5625rem] font-bold leading-tight select-none">2016 Ford GT<br /><span className='text-[1.3rem] font-normal'>24h Le Mans</span></p>
+            </div>
+              <div className="block sm:hidden">
+              {/* 
+                Ícone de Gran Turismo — propriedade de Sony Interactive Entertainment.
+                Uso não comercial e apenas ilustrativo neste projeto educacional.
+              */}
+              <img
+                src={GranTurismoLogo}
+                alt="Gran Turismo Logo"
+                className="block filter saturate-[150%] brightness-[0.9] opacity-[0.3] relative z-0"
+              />
             </div>
           </main>
         </div>
-      <div className="absolute top-[62.12rem] flex justify-between items-center px-[5rem] md:px-[7.5rem] w-full h-[5.375rem] bg-[linear-gradient(180deg,_#949494_1.0%,_#9E9E9E_15.01%,_#CECECE_60.56%,_#FFF_98.54%)]">
-        <p className='text-sm text-gray-600 select-none'>© <strong>GHK</strong> 2025</p>
-        <p className='text-xs text-gray-500 select-none justify-center'><strong>Gran Turismo</strong> is a registered trademark of <strong>Sony Interactive Entertainment Inc.</strong></p>
+      <div className="absolute top-[55rem] sm:top-[62.12rem] flex justify-between items-center px-[5rem] px-[3rem] sm:px-[7.5rem] w-full h-[5.375rem] bg-[linear-gradient(180deg,_#949494_1.0%,_#9E9E9E_15.01%,_#CECECE_60.56%,_#FFF_98.54%)]">
+        <p className='text-xs sm:text-sm text-gray-600 select-none'><strong>GHK</strong> 2025</p>
+        <p className='text-[10px] sm:text-xs text-gray-500 select-none justify-end md:justify-center'><strong>Gran Turismo</strong> is a registered trademark of <strong>Sony Interactive Entertainment Inc.</strong></p>
       </div>
       <img
         src={Car}
         alt=""
-        className="w-[69.625rem] xl:h-[30.9] 2xl:h-[14.8125rem] aspect-[1114/237] absolute left-[24.4rem] -translate-x-1/2 top-[47.7rem] bg-[lightgray_0px_0px/_100%_135.341%_no-repeat] object-cover animate-slideInRight"
+        className="w-[23.25rem] sm:w-[69.625rem] sm:min-h-[14.8125rem] aspect-[1114/237] absolute bottom-[2rem] sm:top-[47.75rem] -translate-x-1/2 bg-[lightgray_0px_0px/_100%_135.341%_no-repeat] object-cover animate-slideInRight"
       />
     </div>
   )
