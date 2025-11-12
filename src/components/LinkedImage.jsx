@@ -11,6 +11,7 @@ const SIZE_MAP = {
 export default function LinkedImage({
   href,
   src,
+  darkSrc,
   alt = '',
   size = 'md',
   imgClassName, // optional override
@@ -41,7 +42,16 @@ export default function LinkedImage({
         <span className="absolute -inset-1 rounded-full bg-gradient-to-r from-sky-400 to-red-500 opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-80 pointer-events-none" />
       )}
 
-      <img src={src} alt={alt} className={`${computedImgClass} relative z-10`} />
+      {/* Render light/dark image variants when a darkSrc is provided.
+          Use Tailwind `dark:` utilities to show/hide without JS. */}
+      {darkSrc ? (
+        <>
+          <img src={src} alt={alt} className={`${computedImgClass} relative z-10 block dark:hidden`} />
+          <img src={darkSrc} alt={`${alt} (dark)`} className={`${computedImgClass} relative z-10 hidden dark:block`} />
+        </>
+      ) : (
+        <img src={src} alt={alt} className={`${computedImgClass} relative z-10`} />
+      )}
 
       {!iconOnly && children ? <span className="text-sm">{children}</span> : null}
     </a>

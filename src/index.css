@@ -11,9 +11,17 @@ body {
 /* Design tokens: CSS variables used across the app */
 :root {
   --black: #000000;
+  --blue300: #64B5F6;
   --bluegrey300: #90A4AE;
+  --grey100: #F5F5F5;
+  --gray200: #EEEEEE;
+  --gray400: #d1d5db;
   --gray800: #353535;
   --red300: #E57373;
+  --light-background: linear-gradient(180deg, #FFF 50%, #999 100%);
+  --dark-background: linear-gradient(180deg, #242424 0%, #252525 48.87%, #484848 81.37%, #7D7D7D 100%);
+  --light-footer: linear-gradient(180deg, #999 12.01%, #CECECE 60.56%, #FFF 98.54%);
+  --dark-footer: linear-gradient(0deg, #414141 10.87%, #575757 60.87%, #737373 100%);
 }
 
 /* Make scrollbars thin, translucent and rounded (applies to elements using overflow-auto/scroll) */
