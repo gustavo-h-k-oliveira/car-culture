@@ -91,7 +91,7 @@ export default function App() {
               <h1 className="[font-family:'Instrument Sans'] text-[4.0625rem] lg:text-[7rem] xl:text-[9.375rem] text-[var(--gray800,#353535)] font-bold leading-tight select-none text-center xl:text-left self-stretch">
                 Car Culture
               </h1>
-              <p className="w-full 2xl:w-[51.5rem] text-center xl:text-left text-[var(--black,#000)] [font-family:'Instrument Sans'] text-[2.8125rem] md:text-[3.5rem] xl:text-[5rem] font-semibold leading-tight select-none self-stretch">
+              <p className="w-full 2xl:w-[51.5rem] text-center xl:text-left text-[var(--black,#000)] [font-family:'Instrument Sans'] text-[2.8125rem] lg:text-[3.5rem] xl:text-[5rem] font-semibold leading-tight select-none self-stretch">
                 More than passion for machines, it’s a <span className="text-sky-600">lifestyle</span>
               </p>
             </div>
