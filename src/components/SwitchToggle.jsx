@@ -2,26 +2,56 @@ import React, { useState, useEffect } from 'react'
 
 export default function SwitchToggle({ label = 'dark mode', variant = 'default', inputProps = {} }) {
   // variant: 'default' (label above) or 'compact' (inline)
-  const [checked, setChecked] = useState(false)
+  // Initialize synchronously from localStorage (if available) or existing DOM class.
+  const [checked, setChecked] = useState(() => {
+    if (typeof window === 'undefined' || typeof document === 'undefined') return false
+    try {
+      const stored = window.localStorage.getItem('theme') // 'dark' | 'light' | null
+      if (stored === 'dark') return true
+      if (stored === 'light') return false
+    } catch (e) {
+      // ignore localStorage errors
+    }
+    return document.documentElement.classList.contains('dark')
+  })
 
-  // initialize from document or prefers-color-scheme
+  // sync root class and persist when checked changes
   useEffect(() => {
-    if (typeof document === 'undefined') return
-    const hasDarkClass = document.documentElement.classList.contains('dark')
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-    setChecked(hasDarkClass || prefersDark)
-  }, [])
-
-  // sync root class when toggled
-  useEffect(() => {
-    if (typeof document === 'undefined') return
-    if (checked) document.documentElement.classList.add('dark')
-    else document.documentElement.classList.remove('dark')
+    if (typeof document === 'undefined' || typeof window === 'undefined') return
+    if (checked) {
+      document.documentElement.classList.add('dark')
+      try { window.localStorage.setItem('theme', 'dark') } catch (e) {}
+    } else {
+      document.documentElement.classList.remove('dark')
+      try { window.localStorage.setItem('theme', 'light') } catch (e) {}
+    }
   }, [checked])
 
+  // Listen for theme-change broadcasts from other instances and sync
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const onThemeChange = (e) => {
+      if (e && e.detail && typeof e.detail.dark === 'boolean') {
+        setChecked(Boolean(e.detail.dark))
+      }
+    }
+    window.addEventListener('theme-change', onThemeChange)
+    return () => window.removeEventListener('theme-change', onThemeChange)
+  }, [])
+
   const handleChange = (e) => {
-    setChecked(e.target.checked)
+    const next = Boolean(e.target.checked)
+    setChecked(next)
     if (inputProps && typeof inputProps.onChange === 'function') inputProps.onChange(e)
+
+    // broadcast to other instances so they stay in sync
+    if (typeof window !== 'undefined') {
+      try {
+        window.dispatchEvent(new CustomEvent('theme-change', { detail: { dark: next } }))
+      } catch (err) {
+        // ignore dispatch errors in restrictive environments
+      }
+    }
   }
 
   // avoid clobbering user-provided checked/defaultChecked/onChange
