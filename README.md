@@ -1,31 +1,57 @@
-# car-culture
+# Car Culture
 
-Projeto de exemplo configurado com Vite + React + TailwindCSS.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Como rodar localmente:
+Um projeto desenvolvido utilizando a stack **Vite** + **React** + **TailwindCSS** com o objetivo de demonstrar a minha paixão por carros e homenagear um dos meus jogos favoritos, **Gran Turismo 4**. O site possui suporte ao modo claro e escuro com persistência, componentes reutilizzáveis e design responsivo.
 
-1. Instalar dependências
+Um pequeno easter egg, a minha inspiração para o desenvolvimento da página, também está presente no projeto. 🎶
+
+## Stack empregada no projeto
+
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Vitest](https://img.shields.io/badge/-Vitest-252529?style=for-the-badge&logo=vitest&logoColor=FCC72B) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+
+## Design no Figma
+
+![Landing Page (light mode)](images/Landing_Page_light_mode.png)
+> Landing Page (light mode)
+
+---
+![Landing Page (dark mode)](images/Landing_Page_dark_mode.png)
+> Landing Page (dark mode)
+
+---
+![Landing Page em mobile (light mode)](images/Android_Compact_light_mode.png)
+> Landing Page no mobile (light mode)
+
+---
+![Landing Page em mobile (dark mode)](images/Android_Compact_dark_mode.png)
+> Landing Page no mobile (dark mode)
+
+---
+
+## Como rodar localmente
+
+1. Clonar o repositório:
+
+```bash
+git clone https://github.com/gustavo-h-k-oliveira/car-culture.git
+cd car-culture
+```
+
+2. Instalar dependências:
 
 ```bash
 npm install
 ```
 
-2. Iniciar servidor de desenvolvimento
+3. Iniciar servidor de desenvolvimento:
 
 ```bash
 npm run dev
 ```
 
-3. Build para produção
+Abra no navegador: `http://localhost:5173` (padrão do Vite).
 
-```bash
-npm run build
-```
+## Contribuição
 
-4. Preview do build
-
-```bash
-npm run preview
-```
-
-Existe também `README_SETUP.md` com instruções rápidas de setup.
+Sinta‑se à vontade para contribuir. Forks e Pull Requests são bem‑vindos!
