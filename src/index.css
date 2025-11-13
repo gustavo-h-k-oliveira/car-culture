@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small custom style */
+body {
+  @apply antialiased;
+  font-family: 'Inter', 'Instrument Sans', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Design tokens: CSS variables used across the app */
+:root {
+  --black: #000000;
+  --blue300: #64B5F6;
+  --bluegrey300: #90A4AE;
+  --grey100: #F5F5F5;
+  --gray200: #EEEEEE;
+  --gray400: #d1d5db;
+  --gray800: #353535;
+  --red300: #E57373;
+  --light-background: linear-gradient(180deg, #FFF 50%, #999 100%);
+  --dark-background: linear-gradient(180deg, #242424 0%, #252525 48.87%, #484848 81.37%, #7D7D7D 100%);
+  --light-footer: linear-gradient(180deg, #999 12.01%, #CECECE 60.56%, #FFF 98.54%);
+  --dark-footer: linear-gradient(0deg, #414141 10.87%, #575757 60.87%, #737373 100%);
+}
+
+/* Make scrollbars thin, translucent and rounded (applies to elements using overflow-auto/scroll) */
+/* Uses standard properties for Firefox and WebKit pseudo-elements for others */
+* {
+  scrollbar-gutter: stable;
+}
+
+.overflow-auto {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,0,0,0.25) transparent;
+}
+
+/* WebKit browsers (Chrome, Safari, newer Edge) */
+.overflow-auto::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.overflow-auto::-webkit-scrollbar-track {
+  background: transparent;
+}
+.overflow-auto::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.18);
+  border-radius: 9999px;
+  border: 2px solid transparent; /* creates padding around thumb */
+  background-clip: content-box;
+}
+.overflow-auto:hover::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.28);
+}
+
+/* Optional: utility class to hide scrollbars while keeping scroll functionality */
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Smooth theme background crossfade and simple color transitions */
+/*
+  - `.theme-bg` / `.theme-footer` pseudo-layers can be used if you want
+    crossfading backgrounds. For a simple transition between light/dark
+    colors, use `.theme-animate` on a container to animate common properties
+    for its descendants (color, background-color, border-color, filter,
+    box-shadow, opacity).
+*/
+.theme-animate {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, filter, box-shadow;
+  transition-duration: 280ms;
+  transition-timing-function: ease;
+}
+
+.theme-animate * {
+  transition: color 280ms ease, background-color 280ms ease, border-color 280ms ease, box-shadow 280ms ease, filter 280ms ease, opacity 280ms ease;
+}
+.theme-animate img,
+.theme-animate svg {
+  transition: filter 280ms ease, opacity 280ms ease, transform 280ms ease;
+  will-change: filter, opacity, transform;
+}
+
+/* background crossfade using pseudo-element layers */
+.theme-bg {
+  position: relative;
+  isolation: isolate;
+}
+.theme-bg::before,
+.theme-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  transition: opacity 360ms ease;
+}
+.theme-bg::before { background-image: var(--light-background); opacity: 1; z-index: -2; }
+.theme-bg::after { background-image: var(--dark-background); opacity: 0; z-index: -1; }
+.dark .theme-bg::before { opacity: 0; }
+.dark .theme-bg::after { opacity: 1; }
+
+.theme-footer {
+  position: relative;
+  isolation: isolate;
+}
+.theme-footer::before,
+.theme-footer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  transition: opacity 360ms ease;
+}
+.theme-footer::before { background-image: var(--light-footer); opacity: 1; z-index: -2; }
+.theme-footer::after { background-image: var(--dark-footer); opacity: 0; z-index: -1; }
+.dark .theme-footer::before { opacity: 0; }
+.dark .theme-footer::after { opacity: 1; }
+
+
