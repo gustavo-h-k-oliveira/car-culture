@@ -62,3 +62,69 @@ body {
 .scrollbar-hidden::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
+
+/* Smooth theme background crossfade and simple color transitions */
+/*
+  - `.theme-bg` / `.theme-footer` pseudo-layers can be used if you want
+    crossfading backgrounds. For a simple transition between light/dark
+    colors, use `.theme-animate` on a container to animate common properties
+    for its descendants (color, background-color, border-color, filter,
+    box-shadow, opacity).
+*/
+.theme-animate {
+  transition-property: color, background-color, border-color, fill, stroke, opacity, filter, box-shadow;
+  transition-duration: 280ms;
+  transition-timing-function: ease;
+}
+
+.theme-animate * {
+  transition: color 280ms ease, background-color 280ms ease, border-color 280ms ease, box-shadow 280ms ease, filter 280ms ease, opacity 280ms ease;
+}
+.theme-animate img,
+.theme-animate svg {
+  transition: filter 280ms ease, opacity 280ms ease, transform 280ms ease;
+  will-change: filter, opacity, transform;
+}
+
+/* background crossfade using pseudo-element layers */
+.theme-bg {
+  position: relative;
+  isolation: isolate;
+}
+.theme-bg::before,
+.theme-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  transition: opacity 360ms ease;
+}
+.theme-bg::before { background-image: var(--light-background); opacity: 1; z-index: -2; }
+.theme-bg::after { background-image: var(--dark-background); opacity: 0; z-index: -1; }
+.dark .theme-bg::before { opacity: 0; }
+.dark .theme-bg::after { opacity: 1; }
+
+.theme-footer {
+  position: relative;
+  isolation: isolate;
+}
+.theme-footer::before,
+.theme-footer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  transition: opacity 360ms ease;
+}
+.theme-footer::before { background-image: var(--light-footer); opacity: 1; z-index: -2; }
+.theme-footer::after { background-image: var(--dark-footer); opacity: 0; z-index: -1; }
+.dark .theme-footer::before { opacity: 0; }
+.dark .theme-footer::after { opacity: 1; }
+
+
