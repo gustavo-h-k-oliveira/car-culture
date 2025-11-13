@@ -39,8 +39,8 @@ export default function App() {
   }, [])
   return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="relative flex min-w-[25.5rem] w-full h-full min-h-screen sm:min-h-[100svh] px-[1.5rem] py-[1.25rem] flex-col items-center gap-[0.9375rem] sm:py-[3.125rem] sm:px-[5rem] md:px-[7.5rem] sm:items-start sm:gap-[4.0625rem] shadow-lg overflow-auto [background-image:var(--light-background)] dark:[background-image:var(--dark-background)] z-0">
-          <div className="hidden sm:block sm:absolute sm:top-[5.69rem] sm:flex-shrink-0 sm:self-stretch sm:h-[56.0625rem] sm:aspect-[1353.44/897.00] sm:bg-transparent sm:overflow-hidden sm:left-1/2 sm:-translate-x-1/2 sm:w-[84.58988rem] 2xl:left-auto 2xl:right-[3.29rem] 2xl:translate-x-0">
+        <div className="relative flex min-w-[25.5rem] w-full h-[57.3125rem] px-[1.5rem] py-[1.25rem] flex-col items-center gap-[0.9375rem] sm:h-[67.5rem] sm:py-[3.125rem] sm:px-[5rem] md:px-[7.5rem] sm:items-start sm:gap-[4.0625rem] shadow-lg overflow-auto [background-image:var(--light-background)] dark:[background-image:var(--dark-background)] z-0">
+           <div className="hidden sm:block sm:absolute sm:top-[5.69rem] sm:flex-shrink-0 sm:self-stretch sm:h-[56.0625rem] sm:aspect-[1353.44/897.00] sm:bg-transparent sm:overflow-hidden sm:left-1/2 sm:-translate-x-1/2 sm:w-[84.58988rem] 2xl:left-auto 2xl:right-[3.29rem] 2xl:translate-x-0">
             {/* 
               Ícone de Gran Turismo — propriedade de Sony Interactive Entertainment.
               Uso não comercial e apenas ilustrativo neste projeto educacional.
