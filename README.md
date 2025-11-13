@@ -52,6 +52,20 @@ npm run dev
 
 Abra no navegador: `http://localhost:5173` (padrão do Vite).
 
+## Deploy no GitHub Pages
+
+Este projeto está configurado para deploy automático no GitHub Pages. Sempre que houver um push para a branch `main`, o GitHub Actions irá automaticamente:
+
+1. Fazer o build do projeto
+2. Publicar o site no GitHub Pages
+
+Para habilitar o GitHub Pages no seu fork:
+
+1. Vá em **Settings** > **Pages** no repositório
+2. Em **Source**, selecione **GitHub Actions**
+
+O site estará disponível em: `https://[seu-usuario].github.io/car-culture/`
+
 ## Contribuição
 
 Sinta‑se à vontade para contribuir. Forks e Pull Requests são bem‑vindos!
