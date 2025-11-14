@@ -1,12 +1,10 @@
 # Car Culture
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Status: in progress](https://img.shields.io/badge/Status-in%20progress-FF0000)
 
 Um projeto desenvolvido utilizando a stack **Vite** + **React** + **TailwindCSS** com o objetivo de demonstrar a minha paixão por carros e homenagear um dos meus jogos favoritos, **Gran Turismo 4**. O site possui suporte ao modo claro e escuro com persistência, componentes reutilizzáveis e design responsivo.
 
 Um pequeno easter egg, a minha inspiração para o desenvolvimento da página, também está presente no projeto. 🎶
-
-## Stack empregada no projeto
 
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white) ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white) ![Vitest](https://img.shields.io/badge/-Vitest-252529?style=for-the-badge&logo=vitest&logoColor=FCC72B) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
