@@ -1,6 +1,6 @@
 # Car Culture
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Status: in progress](https://img.shields.io/badge/Status-in%20progress-FF0000)
 
 Um projeto desenvolvido utilizando a stack **Vite** + **React** + **TailwindCSS** com o objetivo de demonstrar a minha paixão por carros e homenagear um dos meus jogos favoritos, **Gran Turismo 4**. O site possui suporte ao modo claro e escuro com persistência, componentes reutilizzáveis e design responsivo.
 
