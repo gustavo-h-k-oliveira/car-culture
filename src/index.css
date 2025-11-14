@@ -128,3 +128,22 @@ body {
 .dark .theme-footer::after { opacity: 1; }
 
 
+/* Defensive rules to avoid layout breakage on zoom/HiDPI and wide elements */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* prevent horizontal scroll from wide children */
+}
+
+/* Ensure images never force layout wider than their container */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utility to help debugging overflow issues during development */
+.debug-overflow * {
+  outline: 1px dashed rgba(255,0,0,0.12);
+}
+
+
