@@ -14,16 +14,15 @@ Um pequeno easter egg, a minha inspiração para o desenvolvimento da página, t
 > Landing Page (light mode)
 
 ---
+
 ![Landing Page (dark mode)](images/Landing_Page_dark_mode.png)
 > Landing Page (dark mode)
 
 ---
-![Landing Page em mobile (light mode)](images/Android_Compact_light_mode.png)
-> Landing Page no mobile (light mode)
 
----
-![Landing Page em mobile (dark mode)](images/Android_Compact_dark_mode.png)
-> Landing Page no mobile (dark mode)
+| Landing Page no mobile (light mode) | Landing Page no mobile (dark mode) |
+|---------|----------|
+| ![Landing Page em mobile (light mode)](images/Android_Compact_light_mode.png) | ![Landing Page em mobile (dark mode)](images/Android_Compact_dark_mode.png) |
 
 ---
 
